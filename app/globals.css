@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-qbs-white text-qbs-text;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  ::selection {
+    @apply bg-qbs-primary text-white;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-qbs-gray-light;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-qbs-gray-dark rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-qbs-primary;
+  }
+
+  /* Prevent unwanted focus/active states on navigation links */
+  nav a:focus,
+  nav a:active,
+  nav a.active,
+  nav a:visited,
+  nav a:target {
+    background-color: transparent !important;
+    background: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+  }
+  
+  /* Specifically target mobile menu links */
+  nav .lg\\:hidden a {
+    background-color: transparent !important;
+    background: none !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-qbs-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold 
+           hover:bg-qbs-primary-dark transition-all duration-300 
+           transform hover:scale-105 hover:shadow-xl hover:shadow-qbs-primary/20
+           text-sm md:text-base;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-qbs-primary text-qbs-primary px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold 
+           hover:bg-qbs-primary hover:text-white transition-all duration-300
+           transform hover:scale-105 text-sm md:text-base;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-qbs-primary to-qbs-primary-light bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:transform hover:scale-105 
+           hover:shadow-2xl hover:shadow-qbs-primary/10;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-xl border border-qbs-gray/30;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 768px) {
+    .mobile-menu-open {
+      @apply overflow-hidden;
+    }
+    
+    .mobile-touch-target {
+      @apply min-h-[44px] min-w-[44px];
+    }
+  }
+}
