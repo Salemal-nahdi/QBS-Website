@@ -102,11 +102,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
             <div className="space-y-3">
               <a
-                href="tel:0400000000"
+                href="tel:+61423831446"
                 className="flex items-start space-x-3 text-white/70 hover:text-white transition-colors"
               >
                 <FaPhone className="mt-1 flex-shrink-0" />
-                <span>0400 000 000</span>
+                <span>+61 423 831 446</span>
               </a>
               <a
                 href="mailto:info@qbs.com.au"

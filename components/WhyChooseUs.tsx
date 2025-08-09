@@ -110,7 +110,7 @@ const WhyChooseUs = () => {
             <a href="#contact" className="btn-primary">
               Get Your Free Quote
             </a>
-            <a href="tel:0400000000" className="btn-secondary">
+            <a href="tel:+61423831446" className="btn-secondary">
               Call Us Now
             </a>
           </div>

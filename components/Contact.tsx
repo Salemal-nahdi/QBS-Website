@@ -50,8 +50,8 @@ const Contact = () => {
     {
       icon: <FaPhone />,
       title: 'Phone',
-      content: '0400 000 000',
-      link: 'tel:0400000000',
+      content: '+61 423 831 446',
+      link: 'tel:+61423831446',
     },
     {
       icon: <FaEnvelope />,
@@ -152,7 +152,7 @@ const Contact = () => {
                     required
                     className="w-full px-4 py-3 rounded-lg bg-white border border-qbs-gray/30 
                              focus:border-qbs-primary focus:outline-none transition-colors"
-                    placeholder="0400 000 000"
+                    placeholder="+61 423 831 446"
                   />
                 </div>
                 <div>
@@ -301,7 +301,7 @@ const Contact = () => {
                 Our rapid response team is available 24/7 for urgent cleaning requirements.
               </p>
               <a
-                href="tel:0400000000"
+                href="tel:+61423831446"
                 className="inline-flex items-center space-x-2 bg-white text-qbs-primary px-6 py-3 
                        rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
