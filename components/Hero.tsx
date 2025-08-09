@@ -119,8 +119,8 @@ const Hero = () => {
                   transition={{ delay: 0.8 }}
                   className="glass-effect p-6 rounded-2xl card-hover h-40"
                 >
-                  <div className="w-12 h-12 bg-qbs-primary/20 rounded-lg flex items-center justify-center mb-4">
-                    <FaUserMd className="text-xl text-qbs-primary" />
+                  <div className="w-10 h-10 bg-qbs-primary/20 rounded-lg flex items-center justify-center mb-3">
+                    <FaUserMd className="text-base text-qbs-primary" />
                   </div>
                   <h4 className="text-lg font-semibold mb-2 text-qbs-text">Clinic Cleaning</h4>
                   <p className="text-sm text-qbs-text-dim">Medical-grade sanitization</p>
@@ -132,8 +132,8 @@ const Hero = () => {
                   transition={{ delay: 0.9 }}
                   className="glass-effect p-6 rounded-2xl card-hover h-40"
                 >
-                  <div className="w-12 h-12 bg-qbs-primary/20 rounded-lg flex items-center justify-center mb-4">
-                    <FaWrench className="text-xl text-qbs-primary" />
+                  <div className="w-10 h-10 bg-qbs-primary/20 rounded-lg flex items-center justify-center mb-3">
+                    <FaWrench className="text-base text-qbs-primary" />
                   </div>
                   <h4 className="text-lg font-semibold mb-2 text-qbs-text">Builders Clean</h4>
                   <p className="text-sm text-qbs-text-dim">Post-construction excellence</p>
@@ -145,8 +145,8 @@ const Hero = () => {
                   transition={{ delay: 1.0 }}
                   className="glass-effect p-6 rounded-2xl card-hover h-40"
                 >
-                  <div className="w-12 h-12 bg-qbs-primary/20 rounded-lg flex items-center justify-center mb-4">
-                    <FaBuilding className="text-xl text-qbs-primary" />
+                  <div className="w-10 h-10 bg-qbs-primary/20 rounded-lg flex items-center justify-center mb-3">
+                    <FaBuilding className="text-base text-qbs-primary" />
                   </div>
                   <h4 className="text-lg font-semibold mb-2 text-qbs-text">Office Cleaning</h4>
                   <p className="text-sm text-qbs-text-dim">Professional workspace care</p>
@@ -158,8 +158,8 @@ const Hero = () => {
                   transition={{ delay: 1.1 }}
                   className="glass-effect p-6 rounded-2xl card-hover h-40"
                 >
-                  <div className="w-12 h-12 bg-qbs-primary/20 rounded-lg flex items-center justify-center mb-4">
-                    <FaStar className="text-xl text-qbs-primary" />
+                  <div className="w-10 h-10 bg-qbs-primary/20 rounded-lg flex items-center justify-center mb-3">
+                    <FaStar className="text-base text-qbs-primary" />
                   </div>
                   <h4 className="text-lg font-semibold mb-2 text-qbs-text">Deep Cleaning</h4>
                   <p className="text-sm text-qbs-text-dim">Thorough & detailed service</p>
