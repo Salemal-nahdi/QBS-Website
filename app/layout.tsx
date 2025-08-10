@@ -5,6 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://qbs-website.netlify.app'),
   title: 'QBS - Professional Cleaning Services | South Australia',
   description: 'QBS provides premium commercial cleaning services in South Australia. Specialising in clinic cleaning and builders clean. Get a free quote today!',
   keywords: 'cleaning services, commercial cleaning, clinic cleaning, builders clean, South Australia, Adelaide, professional cleaning',
@@ -18,6 +19,8 @@ export const metadata: Metadata = {
     description: 'Premium commercial cleaning services in South Australia',
     type: 'website',
     locale: 'en_AU',
+    url: 'https://qbs-website.netlify.app',
+    siteName: 'QBS Professional Cleaning Services',
   },
 }
 
