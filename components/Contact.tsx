@@ -28,22 +28,41 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: '',
+    try {
+      const form = e.target as HTMLFormElement
+      const formData = new FormData(form)
+      
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
       })
+      
+      if (response.ok) {
+        setIsSubmitting(false)
+        setSubmitStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          message: '',
+        })
+        
+        // Reset status after 5 seconds
+        setTimeout(() => setSubmitStatus('idle'), 5000)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      setIsSubmitting(false)
+      setSubmitStatus('error')
+      console.error('Form submission error:', error)
       
       // Reset status after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000)
-    }, 1500)
+    }
   }
 
   const contactInfo = [
@@ -102,7 +121,20 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="bg-qbs-gray-light border border-qbs-gray/30 p-8 rounded-2xl"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit} 
+              className="space-y-6"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <div style={{ display: 'none' }}>
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2 text-qbs-text">
@@ -235,6 +267,16 @@ const Contact = () => {
                   className="text-center p-4 bg-qbs-primary/20 border border-qbs-primary/50 rounded-lg"
                 >
                   <p className="text-qbs-primary">Thank you! We'll be in touch within 24 hours.</p>
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-center p-4 bg-red-100 border border-red-300 rounded-lg"
+                >
+                  <p className="text-red-600">Sorry, there was an error sending your message. Please try again or call us directly.</p>
                 </motion.div>
               )}
             </form>
