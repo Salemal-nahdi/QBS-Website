@@ -24,20 +24,31 @@ const Contact = () => {
     }))
   }
 
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     
     try {
-      const form = e.target as HTMLFormElement
-      const formData = new FormData(form)
-      
-      // Add form-name for Netlify
-      formData.append('form-name', 'contact')
+      const submissionData = {
+        'form-name': 'contact',
+        'name': formData.name,
+        'email': formData.email,
+        'phone': formData.phone,
+        'company': formData.company,
+        'service': formData.service,
+        'message': formData.message,
+      }
       
       const response = await fetch('/', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(submissionData),
       })
       
       if (response.ok) {
@@ -124,19 +135,9 @@ const Contact = () => {
             className="bg-qbs-gray-light border border-qbs-gray/30 p-8 rounded-2xl"
           >
             <form 
-              name="contact" 
-              method="POST" 
-              data-netlify="true" 
-              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
               className="space-y-6"
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <div style={{ display: 'none' }}>
-                <label>
-                  Don't fill this out if you're human: <input name="bot-field" />
-                </label>
-              </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2 text-qbs-text">
