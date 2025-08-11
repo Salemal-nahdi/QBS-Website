@@ -109,11 +109,11 @@ const Footer = () => {
                 <span>+61 423 831 446</span>
               </a>
               <a
-                href="mailto:info@qbs.com.au"
+                href="mailto:info@qbscleaning.com.au"
                 className="flex items-start space-x-3 text-white/70 hover:text-white transition-colors"
               >
                 <FaEnvelope className="mt-1 flex-shrink-0" />
-                <span>info@qbs.com.au</span>
+                <span>info@qbscleaning.com.au</span>
               </a>
               <div className="flex items-start space-x-3 text-white/70">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0" />

@@ -88,8 +88,8 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: 'Email',
-      content: 'info@qbs.com.au',
-      link: 'mailto:info@qbs.com.au',
+      content: 'info@qbscleaning.com.au',
+      link: 'mailto:info@qbscleaning.com.au',
     },
     {
       icon: <FaMapMarkerAlt />,

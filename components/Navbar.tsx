@@ -128,9 +128,9 @@ const Navbar = () => {
               <FaPhone className="text-qbs-primary" />
               <span>+61 423 831 446</span>
             </a>
-            <a href="mailto:info@qbs.com.au" className="flex items-center space-x-2 text-qbs-text-dim hover:text-qbs-primary transition-colors">
+            <a href="mailto:info@qbscleaning.com.au" className="flex items-center space-x-2 text-qbs-text-dim hover:text-qbs-primary transition-colors">
               <FaEnvelope className="text-qbs-primary" />
-              <span>info@qbs.com.au</span>
+              <span>info@qbscleaning.com.au</span>
             </a>
           </div>
 
@@ -202,11 +202,11 @@ const Navbar = () => {
                         <span className="font-medium">+61 423 831 446</span>
                       </a>
                       <a 
-                        href="mailto:info@qbs.com.au" 
+                        href="mailto:info@qbscleaning.com.au" 
                         className="flex items-center space-x-3 text-qbs-text-dim hover:text-qbs-primary transition-colors py-2"
                       >
                         <FaEnvelope className="text-qbs-primary text-lg" />
-                        <span className="font-medium">info@qbs.com.au</span>
+                        <span className="font-medium">info@qbscleaning.com.au</span>
                       </a>
                     </motion.div>
                   </div>
