@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form - Hidden for Netlify</title>
+</head>
+<body>
+    <!-- This form is hidden and used by Netlify to detect form fields -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="company" />
+        <select name="service">
+            <option value="">Select a service</option>
+            <option value="clinic-cleaning">Medical & Clinic Cleaning</option>
+            <option value="builders-clean">Builders Clean</option>
+            <option value="office-cleaning">Commercial Office Cleaning</option>
+            <option value="retail-cleaning">Retail & Showroom Cleaning</option>
+            <option value="deep-cleaning">Deep Cleaning Services</option>
+            <option value="emergency-cleaning">Emergency Cleaning</option>
+            <option value="other">Other</option>
+        </select>
+        <textarea name="message"></textarea>
+        <input type="hidden" name="form-name" value="contact" />
+        <div style="display: none;">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </div>
+    </form>
+</body>
+</html>
